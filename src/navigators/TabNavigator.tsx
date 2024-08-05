@@ -6,6 +6,7 @@ import Home from "../screens/Home";
 import Cart from "../screens/Cart";
 import Favorites from "../screens/Favorites";
 import OrderHistory from "../screens/OrderHistory";
+
 import { COLORS } from "../theme/theme";
 import { BlurView } from "@react-native-community/blur";
 
