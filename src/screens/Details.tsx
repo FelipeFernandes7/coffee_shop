@@ -39,11 +39,11 @@ export default function Details({ navigation, route }: any) {
     favorite ? deleteFromFavoriteList(type, id) : addToFavoriteList(type, id);
   };
 
-  const BackHandler = () => {
+  function BackHandler() {
     navigation.pop();
-  };
+  }
 
-  const addToCarthandler = ({
+  function addToCartHandler({
     id,
     index,
     name,
@@ -52,7 +52,7 @@ export default function Details({ navigation, route }: any) {
     special_ingredient,
     type,
     price,
-  }: any) => {
+  }: any) {
     addToCart({
       id,
       index,
@@ -65,7 +65,7 @@ export default function Details({ navigation, route }: any) {
     });
     calculateCartPrice();
     navigation.navigate("Cart");
-  };
+  }
 
   return (
     <View style={styles.ScreenContainer}>
@@ -156,7 +156,7 @@ export default function Details({ navigation, route }: any) {
           price={price}
           buttonTitle="Add to Cart"
           buttonPressHandler={() => {
-            addToCarthandler({
+            addToCartHandler({
               id: ItemOfIndex.id,
               index: ItemOfIndex.index,
               name: ItemOfIndex.name,

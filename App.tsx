@@ -22,12 +22,12 @@ export default function App() {
           options={{ animation: "slide_from_bottom" }}
         />
         <Stack.Screen
-          name="Detalhes"
+          name="Details"
           component={Details}
           options={{ animation: "slide_from_bottom" }}
         />
         <Stack.Screen
-          name="Forma de pagamento"
+          name="Payment"
           component={Payment}
           options={{ animation: "slide_from_bottom" }}
         />

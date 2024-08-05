@@ -26,6 +26,25 @@ import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
 import CoffeeCard from "../components/CoffeeCard";
 import Icon from "../components/icon";
 import { HeaderBar } from "../components/HeaderBar";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+type RootStackParamList = {
+  Home: undefined;
+  Details: {
+    id: string;
+    index: number;
+    type: string;
+  };
+};
+
+type HomeScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  "Home"
+>;
+
+interface HomeProps {
+  navigation: HomeScreenNavigationProp;
+}
 
 interface CategoryIndex {
   index: number;
@@ -61,7 +80,7 @@ function getCoffeeList(category: string, data: Coffee[]) {
   }
 }
 
-export default function Home({ navigation }: any) {
+export default function Home({ navigation }: HomeProps) {
   const { coffeeList, beanList, addToCart, calculateCartPrice } =
     useStore(coffeeContext);
   const [categories, setCategories] = useState<string[]>(
@@ -79,7 +98,6 @@ export default function Home({ navigation }: any) {
   const ListRef = useRef<FlatList<Coffee> | null>(null);
   const tabBarHeight = useBottomTabBarHeight();
 
-  // Funções
   function searchCoffee(search: string) {
     if (search !== "") {
       ListRef.current?.scrollToOffset({
