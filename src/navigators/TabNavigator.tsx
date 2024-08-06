@@ -11,6 +11,7 @@ import { COLORS } from "../theme/theme";
 import { BlurView } from "@react-native-community/blur";
 
 const Tab = createBottomTabNavigator();
+
 export default function TabNavigator() {
   return (
     <Tab.Navigator
