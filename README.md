@@ -27,10 +27,10 @@ Dê uma olhada nas capturas de tela do aplicativo em ação:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/FelipeFernandes7/coffee_shop.git
-   
-    npm install npx react-native run-android
-    ou
-    npx react-native run-ios
+   npm install npx react-native run-android
+   ou
+   npx react-native run-ios
+
 
 
 
